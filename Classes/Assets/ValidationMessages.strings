@@ -1,0 +1,18 @@
+/* 
+  ValidationMessages.strings
+  Exemplo
+
+  Created by Guilherme Machado on 13/12/16.
+  Copyright © 2016 G2M. All rights reserved.
+*/
+
+"cpf.invalidNumberOfCharacters" = "CPF não possui 11 digitos.";
+"cpf.sequence" = "CPF não permitido.";
+"cpf.invalid" = "CPF inválido.";
+"cpf.success" = "CPF validado com sucesso.";
+
+"cnpj.invalidDocument" = "";
+"cnpj.invalidNumberOfCharacters" = "";
+"cnpj.sequence" = "";
+"cnpj.invalid" = "";
+"cnpj.success" = "";

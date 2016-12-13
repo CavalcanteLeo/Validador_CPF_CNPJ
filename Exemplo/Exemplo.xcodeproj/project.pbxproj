@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		398698871DFF89C600D39093 /* DocumentValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 398698861DFF89C600D39093 /* DocumentValidation.m */; };
 		3986988A1DFF8A1300D39093 /* DocumentStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 398698891DFF8A1300D39093 /* DocumentStatus.m */; };
+		3986988C1DFF95CF00D39093 /* ValidationMessages.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3986988B1DFF95CF00D39093 /* ValidationMessages.strings */; };
 		797B1ADA19B61E46001FE969 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1AD919B61E46001FE969 /* Foundation.framework */; };
 		797B1ADC19B61E47001FE969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1ADB19B61E47001FE969 /* CoreGraphics.framework */; };
 		797B1ADE19B61E47001FE969 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1ADD19B61E47001FE969 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 		398698861DFF89C600D39093 /* DocumentValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentValidation.m; path = ../Classes/DocumentValidation.m; sourceTree = "<group>"; };
 		398698881DFF8A1300D39093 /* DocumentStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentStatus.h; path = ../Classes/DocumentStatus.h; sourceTree = "<group>"; };
 		398698891DFF8A1300D39093 /* DocumentStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentStatus.m; path = ../Classes/DocumentStatus.m; sourceTree = "<group>"; };
+		3986988B1DFF95CF00D39093 /* ValidationMessages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ValidationMessages.strings; path = ../Classes/Assets/ValidationMessages.strings; sourceTree = "<group>"; };
 		797B1AD619B61E46001FE969 /* Exemplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797B1AD919B61E46001FE969 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		797B1ADB19B61E47001FE969 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,6 +173,7 @@
 				398698861DFF89C600D39093 /* DocumentValidation.m */,
 				398698881DFF8A1300D39093 /* DocumentStatus.h */,
 				398698891DFF8A1300D39093 /* DocumentStatus.m */,
+				3986988B1DFF95CF00D39093 /* ValidationMessages.strings */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797B1AF219B61E47001FE969 /* Images.xcassets in Resources */,
+				3986988C1DFF95CF00D39093 /* ValidationMessages.strings in Resources */,
 				797B1AE419B61E47001FE969 /* InfoPlist.strings in Resources */,
 				797B1AED19B61E47001FE969 /* Main.storyboard in Resources */,
 			);

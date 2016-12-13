@@ -28,30 +28,37 @@
 #define mensagem @"mensagem"
 #define validado @"validado"
 
+#pragma mark - Nova Validação CPF
+
 -(DocumentValidation *)validateCPF:(NSString *)cpf {
     
     ValidationStatus validation = [self checkCommonErrors:cpf];
     
     DocumentStatus *status = [DocumentStatus new];
+    NSString *description = @"";
     
     BOOL success = validation == Success;
     
     switch (validation) {
 
         case InvalidNumberOfCharacters:
-            status = [[DocumentStatus alloc] init:InvalidNumberOfCharacters description:@""];
+            description = NSLocalizedString(@"cpf.invalidNumberOfCharacters", nil);
+            status = [[DocumentStatus alloc] init:InvalidNumberOfCharacters description:description];
             break;
 
         case Sequence:
-            status = [[DocumentStatus alloc] init:Sequence description:@""];
+            description = NSLocalizedString(@"cpf.sequence", nil);
+            status = [[DocumentStatus alloc] init:Sequence description:description];
             break;
             
         case Success:
-            status = [[DocumentStatus alloc] init:Success description:@""];
+            description = NSLocalizedString(@"cpf.success", nil);
+            status = [[DocumentStatus alloc] init:Success description:description];
             break;
             
         default:
-            status = [[DocumentStatus alloc] init:Invalid description:@""];
+            NSLocalizedString(@"cpf.invalid", nil);
+            status = [[DocumentStatus alloc] init:Invalid description:description];
             break;
             
     }
@@ -123,6 +130,8 @@
     
 }
 
+#pragma mark - Antiga Validação CPF
+
 -(NSDictionary *)validarCPF:(NSString *)cpf {
 
     NSDictionary *erro;
@@ -155,7 +164,6 @@
     }
     return erro;
 }
-
 
 -(int)verificarComunsCPF:(NSString *)cpf {
 /*
@@ -227,6 +235,8 @@
     }
     
 }
+
+#pragma mark - Validação CNPJ
 
 -(NSDictionary *)validarCNPJ:(NSString *)cnpj {
 

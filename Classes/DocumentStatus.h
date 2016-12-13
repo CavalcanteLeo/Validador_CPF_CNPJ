@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    InvalidDocument,
     InvalidNumberOfCharacters,
     Sequence,
     Invalid,
