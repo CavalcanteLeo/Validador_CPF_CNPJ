@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398698871DFF89C600D39093 /* DocumentValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 398698861DFF89C600D39093 /* DocumentValidation.m */; };
+		3986988A1DFF8A1300D39093 /* DocumentStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 398698891DFF8A1300D39093 /* DocumentStatus.m */; };
 		797B1ADA19B61E46001FE969 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1AD919B61E46001FE969 /* Foundation.framework */; };
 		797B1ADC19B61E47001FE969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1ADB19B61E47001FE969 /* CoreGraphics.framework */; };
 		797B1ADE19B61E47001FE969 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797B1ADD19B61E47001FE969 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		398698851DFF89C600D39093 /* DocumentValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentValidation.h; path = ../Classes/DocumentValidation.h; sourceTree = "<group>"; };
+		398698861DFF89C600D39093 /* DocumentValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentValidation.m; path = ../Classes/DocumentValidation.m; sourceTree = "<group>"; };
+		398698881DFF8A1300D39093 /* DocumentStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentStatus.h; path = ../Classes/DocumentStatus.h; sourceTree = "<group>"; };
+		398698891DFF8A1300D39093 /* DocumentStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentStatus.m; path = ../Classes/DocumentStatus.m; sourceTree = "<group>"; };
 		797B1AD619B61E46001FE969 /* Exemplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797B1AD919B61E46001FE969 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		797B1ADB19B61E47001FE969 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +167,10 @@
 			children = (
 				797B1B0F19B61EB0001FE969 /* Validador_CPF_CNPJ.h */,
 				797B1B1019B61EB0001FE969 /* Validador_CPF_CNPJ.m */,
+				398698851DFF89C600D39093 /* DocumentValidation.h */,
+				398698861DFF89C600D39093 /* DocumentValidation.m */,
+				398698881DFF8A1300D39093 /* DocumentStatus.h */,
+				398698891DFF8A1300D39093 /* DocumentStatus.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -265,7 +275,9 @@
 				797B1AF019B61E47001FE969 /* ViewController.m in Sources */,
 				797B1AEA19B61E47001FE969 /* AppDelegate.m in Sources */,
 				797B1AE619B61E47001FE969 /* main.m in Sources */,
+				3986988A1DFF8A1300D39093 /* DocumentStatus.m in Sources */,
 				797B1B1119B61EB0001FE969 /* Validador_CPF_CNPJ.m in Sources */,
+				398698871DFF89C600D39093 /* DocumentValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

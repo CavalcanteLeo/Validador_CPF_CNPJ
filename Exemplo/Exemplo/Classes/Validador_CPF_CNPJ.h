@@ -22,6 +22,8 @@
 
 
 #import <Foundation/Foundation.h>
+#import "DocumentValidation.h"
+#import "DocumentStatus.h"
 
 @class Validador_CPF_CNPJ;
 

@@ -28,6 +28,101 @@
 #define mensagem @"mensagem"
 #define validado @"validado"
 
+-(DocumentValidation *)validateCPF:(NSString *)cpf {
+    
+    ValidationStatus validation = [self checkCommonErrors:cpf];
+    
+    DocumentStatus *status = [DocumentStatus new];
+    
+    BOOL success = validation == Success;
+    
+    switch (validation) {
+
+        case InvalidNumberOfCharacters:
+            status = [[DocumentStatus alloc] init:InvalidNumberOfCharacters description:@""];
+            break;
+
+        case Sequence:
+            status = [[DocumentStatus alloc] init:Sequence description:@""];
+            break;
+            
+        case Success:
+            status = [[DocumentStatus alloc] init:Success description:@""];
+            break;
+            
+        default:
+            status = [[DocumentStatus alloc] init:Invalid description:@""];
+            break;
+            
+    }
+    
+    return [[DocumentValidation alloc] init:success status:status];
+    
+}
+
+-(ValidationStatus)checkCommonErrors:(NSString *)cpf {
+
+    if ([cpf length] != 11 || [cpf isEqualToString:@""]) {
+        return InvalidNumberOfCharacters;
+    }
+    else if ([cpf isEqualToString:@"00000000000"] || [cpf isEqualToString:@"11111111111"]
+               || [cpf isEqualToString:@"22222222222"] || [cpf isEqualToString:@"33333333333"]
+               || [cpf isEqualToString:@"44444444444"] || [cpf isEqualToString:@"55555555555"]
+               || [cpf isEqualToString:@"66666666666"] || [cpf isEqualToString:@"77777777777"]
+               || [cpf isEqualToString:@"88888888888"] || [cpf isEqualToString:@"99999999999"]){
+        return Sequence;
+    }
+    else{
+        return [self validateCPFDocument:cpf];
+    }
+}
+
+-(ValidationStatus)validateCPFDocument:(NSString *)cpf {
+    
+    NSInteger soma = 0;
+    NSInteger peso;
+    NSInteger digito_verificador_10 = [[cpf substringWithRange:NSMakeRange(9, 1)] integerValue];
+    NSInteger digito_verificador_11 = [[cpf substringWithRange:NSMakeRange(10, 1)] integerValue];
+    NSInteger digito_verificador_10_correto;
+    NSInteger digito_verificador_11_correto;
+    
+    //Verificação 10 Digito
+    peso=10;
+    for (int i=0; i<9; i++) {
+        soma = soma + ( [[cpf substringWithRange:NSMakeRange(i, 1)] integerValue] * peso );
+        peso = peso-1;
+    }
+    
+    if (soma % 11 < 2) {
+        digito_verificador_10_correto = 0;
+    }else{
+        digito_verificador_10_correto = 11 - (soma % 11);
+    }
+    
+    //Verifição 11 Digito
+    soma=0;
+    peso=11;
+    for (int i=0; i<10; i++) {
+        soma = soma + ( [[cpf substringWithRange:NSMakeRange(i, 1)] integerValue] * peso );
+        peso = peso-1;
+    }
+    
+    if (soma % 11 < 2) {
+        digito_verificador_11_correto = 0;
+    }else{
+        digito_verificador_11_correto = 11 - (soma % 11);
+    }
+    
+    //Retorno
+    if (digito_verificador_10_correto == digito_verificador_10 && digito_verificador_11_correto == digito_verificador_11) {
+        return Success;
+    }
+    else{
+        return Invalid;
+    }
+    
+}
+
 -(NSDictionary *)validarCPF:(NSString *)cpf {
 
     NSDictionary *erro;
@@ -60,6 +155,7 @@
     }
     return erro;
 }
+
 
 -(int)verificarComunsCPF:(NSString *)cpf {
 /*
